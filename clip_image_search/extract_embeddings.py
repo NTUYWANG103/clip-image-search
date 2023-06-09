@@ -11,7 +11,7 @@ import click
 @click.option('--img_dir', default='/home/data/lumen', help='Directory of images.')
 @click.option('--save_path', default='results/embeddings.pkl', help='Path to save the embeddings.')
 @click.option('--batch_size', default=256, help='Batch size for DataLoader.')
-@click.option('--num_workers', default=20, help='Number of workers for DataLoader.')
+@click.option('--num_workers', default=40, help='Number of workers for DataLoader.')
 def compute_embeddings(img_dir, save_path, batch_size, num_workers):
     if not os.path.exists(os.path.dirname(save_path)):
         os.makedirs(os.path.dirname(save_path))

@@ -2,6 +2,12 @@
 
 This code implements a versatile image search engine leveraging the CLIP model and FAISS, capable of processing both text-to-image and image-to-image queries.
 
+# Image to image
+![img2img](images/img2img.png)
+
+# Text to image
+![txt2img](images/text2img.png)
+
 # Install Environment
 `pip install -r requirements.txt`
 
