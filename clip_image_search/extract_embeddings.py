@@ -28,14 +28,3 @@ result = {'img_path': img_path_list, 'embedding': embedding_list}
 with open(f'{os.path.join(save_dir, "results.pkl")}', 'wb') as f:
     pickle.dump(result, f, protocol=4)
     
-
-
-
-
-
-
-
-
-
-
-
