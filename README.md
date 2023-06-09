@@ -1,3 +1,7 @@
+# Introduction
+
+This code implements a versatile image search engine leveraging the CLIP model and FAISS, capable of processing both text-to-image and image-to-image queries.
+
 # Install Environment
 `pip install -r requirements.txt`
 
