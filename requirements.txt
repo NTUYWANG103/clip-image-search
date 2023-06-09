@@ -1,0 +1,7 @@
+torch
+torchvision
+faiss-gpu
+streamlit
+clip
+tqdm
+click
