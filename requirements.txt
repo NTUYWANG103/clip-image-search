@@ -2,6 +2,8 @@ torch
 torchvision
 faiss-gpu
 streamlit
-clip
+ftfy
+regex
 tqdm
 click
+git+https://github.com/openai/CLIP.git

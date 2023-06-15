@@ -20,7 +20,7 @@ def load_data(faiss_index_path, embeddings_path, device=0):
     return index, embedding_path_list, model, preprocess
 
 # preprocess
-device = 1
+device = 0
 faiss_index_path = 'results/index.faiss'
 embeddings_path = 'results/embeddings.pkl'
 index, embedding_path_list, model, preprocess = load_data(faiss_index_path, embeddings_path, device)
