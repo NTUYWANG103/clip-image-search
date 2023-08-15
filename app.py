@@ -26,7 +26,7 @@ embeddings_path = 'results/embeddings.pkl'
 index, embedding_path_list, model, preprocess = load_data(faiss_index_path, embeddings_path, device)
 
 # select box
-search_mode = st.sidebar.selectbox('Search mode', ('Image', 'Text'))
+search_mode = st.sidebar.selectbox('Search mode', ('Upload Image', 'Image', 'Text'))
 
 # sliders
 if search_mode == 'Image':
@@ -39,7 +39,15 @@ if search_mode == 'Image':
     # search by image
     img = Image.open(img_path).convert('RGB')
     st.image(img, caption=f'Query Image: {img_path}')
-    img_tensor = preprocess(img).unsqueeze(0).to(1)
+    img_tensor = preprocess(img).unsqueeze(0).to(device)
+    with torch.no_grad():
+        features = model.encode_image(img_tensor.to(device))
+elif search_mode == 'Upload Image':
+    uploaded_file = st.file_uploader("Choose an image...", type=['jpg', 'jpeg', 'png'])
+    if uploaded_file is not None:
+        img = Image.open(uploaded_file).convert('RGB')
+    st.image(img)
+    img_tensor = preprocess(img).unsqueeze(0).to(device)
     with torch.no_grad():
         features = model.encode_image(img_tensor.to(device))
 else:
