@@ -26,7 +26,7 @@ embeddings_path = 'results/embeddings.pkl'
 index, embedding_path_list, model, preprocess = load_data(faiss_index_path, embeddings_path, device)
 
 # select box
-search_mode = st.sidebar.selectbox('Search mode', ('Upload Image', 'Image', 'Text'))
+search_mode = st.sidebar.selectbox('Search mode', ('Text', 'Upload Image', 'Image'))
 
 # sliders
 if search_mode == 'Image':
