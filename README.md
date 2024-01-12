@@ -24,3 +24,7 @@ python clip_image_search/build_index.py --embeddings_path results/embeddings.pkl
 ```
 streamlit run app.py
 ```
+
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=NTUYWANG103/clip-image-search&type=Date)](https://star-history.com/#NTUYWANG103/clip-image-search&Date)
